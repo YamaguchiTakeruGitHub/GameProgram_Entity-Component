@@ -1,1 +1,3 @@
 # GameProgram_Entity-Component
+Entity-Componentを活用したゲームを作成しております。
+また「zeen」というエンジニア用のサイトにて仕組みの解説を行っている本を作成中ですのでお気軽にご覧ください。
