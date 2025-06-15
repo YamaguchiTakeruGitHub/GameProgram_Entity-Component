@@ -27,12 +27,12 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_  HINSTANCE hPrevInstance, 
 
     SetDrawScreen(DX_SCREEN_BACK);
 
+
     /*オブジェクトの宣言*/
 	std::vector<std::shared_ptr<GameObject>> gameObjects;
 
     gameObjects.push_back(std::make_shared<Player>());
     gameObjects.push_back(std::make_shared<TestObject>());
-    
  
     // 初期化
     for (auto& obj : gameObjects) {
@@ -63,24 +63,23 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_  HINSTANCE hPrevInstance, 
             }
         }
 
+        int windoW = K_WINDOW::WIDTH;
+        int windoH = K_WINDOW::HEIGHT;
 
+        //画面に合わせてボックスを表示
+        for (int y = 0; y < (windoH / 10); y++)
+        {
+            for (int x = 0; x < (windoW / 10); x++)
+            {
+                DrawBox(x * (windoW / 10), y * (windoH / 10), windoW / 10 * x + (windoW / 10), windoH / 10 * y + (windoH / 10), 0xffffff, false);
+            }
+        }
 
 		for (auto& obj : gameObjects) {
 			obj->Update();
 			obj->Draw();
 		}
-
-        int windoW = K_WINDOW::WIDTH;
-        int windoH = K_WINDOW::HEIGHT;
-
-        //画面に合わせてボックスを表示
-        for (int y = 0; y < 10; y++)
-        {
-            for (int x = 0; x < 10; x++)
-            {
-                DrawBox(x * (windoW / 10), y * (windoH / 10), windoW / 10 * x + (windoW / 10), windoH / 10 * y + (windoH / 10), 0xffffff, false);
-            }
-        }
+        
 
         // 画面が切り替わるのを待つ
         ScreenFlip();

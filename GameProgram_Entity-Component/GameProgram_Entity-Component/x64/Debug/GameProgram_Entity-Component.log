@@ -1,2 +1,4 @@
 ﻿  main.cpp
-  GameProgram_Entity-Component.vcxproj -> C:\Users\yamag\OneDrive\Desktop\GameProgram_Entity-Component\x64\Debug\GameProgram_Entity-Component.exe
+C:\YamaguchiTakeru\GitHub\GameProgram_Entity-Component\GameProgram_Entity-Component\GameProgram_Entity-Component\main.cpp(72,29): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\YamaguchiTakeru\GitHub\GameProgram_Entity-Component\GameProgram_Entity-Component\GameProgram_Entity-Component\main.cpp(73,29): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+  GameProgram_Entity-Component.vcxproj -> C:\YamaguchiTakeru\GitHub\GameProgram_Entity-Component\GameProgram_Entity-Component\x64\Debug\GameProgram_Entity-Component.exe
